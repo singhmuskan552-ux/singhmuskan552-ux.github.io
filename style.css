@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Main content */
+/* Center content */
 .center {
     padding: 120px 20px;
     max-width: 900px;
@@ -16,9 +16,9 @@ body {
     z-index: 2;
 }
 
+/* Headings */
 h1 {
     font-size: 52px;
-    letter-spacing: 2px;
     color: #2f3e34;
     margin-bottom: 30px;
 }
@@ -38,64 +38,55 @@ p {
     text-decoration: none;
     border-radius: 30px;
     margin-top: 40px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
-    background: #1f2b24;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
-.subline {
-    margin-top: 40px;
-    opacity: 0.7;
-}
+/* ===== FLOATING TEXT ===== */
 
-/* ------------------------- */
-/* Floating Meme Animation   */
-/* ------------------------- */
-
-.meme /* FLOATING TEXT */
 .meme {
     position: fixed;
     font-weight: 700;
-    opacity: 0.08;
+    opacity: 0.07;
     font-size: 18px;
-    color: #2f3e34;
     white-space: nowrap;
     pointer-events: none;
+    z-index: 1;
 }
 
-/* Different starting positions */
-.m1 { top: 10%; left: -20%; animation: floatRight 40s linear infinite; }
-.m2 { top: 25%; right: -30%; animation: floatLeft 45s linear infinite; }
-.m3 { bottom: 20%; left: -25%; animation: floatRight 50s linear infinite; }
-.m4 { top: 60%; right: -35%; animation: floatLeft 55s linear infinite; }
-.m5 { bottom: 10%; left: -30%; animation: floatRight 60s linear infinite; }
-.m6 { top: 45%; right: -20%; animation: floatLeft 42s linear infinite; }
-.m7 { bottom: 5%; left: -40%; animation: floatRight 48s linear infinite; }
+/* Each line different direction */
+.m1 { top: 10%; left: -40%; animation: moveRight 40s linear infinite; }
+.m2 { top: 25%; right: -40%; animation: moveLeft 45s linear infinite; }
+.m3 { bottom: 20%; left: -40%; animation: moveRight 50s linear infinite; }
+.m4 { top: 60%; right: -40%; animation: moveLeft 55s linear infinite; }
+.m5 { bottom: 10%; left: -50%; animation: moveRight 60s linear infinite; }
+.m6 { top: 45%; right: -50%; animation: moveLeft 48s linear infinite; }
+.m7 { bottom: 5%; left: -60%; animation: moveRight 52s linear infinite; }
 
-/* Movement animations */
-@keyframes floatRight {
+@keyframes moveRight {
     from { transform: translateX(0); }
-    to { transform: translateX(140vw); }
+    to { transform: translateX(160vw); }
 }
 
-@keyframes floatLeft {
+@keyframes moveLeft {
     from { transform: translateX(0); }
-    to { transform: translateX(-140vw); }
+    to { transform: translateX(-160vw); }
 }
 
-/* FIXED BACKGROUND ICONS */
+/* ===== FIXED BACKGROUND ICONS ===== */
+
 .icon {
     position: fixed;
-    font-size: 32px;
-    opacity: 0.06;
+    font-size: 36px;
+    opacity: 0.08;
     pointer-events: none;
+    z-index: 0;
 }
 
-.icon1 { top: 15%; left: 10%; }
-.icon2 { bottom: 20%; right: 15%; }
-.icon3 { top: 70%; left: 20%; }
-.icon4 { bottom: 60%; right: 10%; }
-
+.i1 { top: 15%; left: 10%; }
+.i2 { bottom: 25%; right: 12%; }
+.i3 { top: 70%; left: 20%; }
+.i4 { bottom: 65%; right: 18%; }
