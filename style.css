@@ -1,15 +1,17 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #fbe7e7, #f8dede, #f4cfcf);
-    color: #2b2b2b;
+    background: linear-gradient(135deg, #e8efe6, #d9e4dd, #f1ece4);
+    color: #3e3a34;
     text-align: center;
+    overflow-x: hidden;
 }
 
-/* Soft fade-in animation */
+/* Soft fade-in */
 .center {
     padding: 120px 20px;
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out;
+    position: relative;
 }
 
 @keyframes fadeIn {
@@ -17,26 +19,29 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Heading */
 h1 {
     font-size: 52px;
     letter-spacing: 2px;
-    color: #5a2a2a;
+    color: #2f3e34;
     margin-bottom: 30px;
 }
 
+/* Paragraphs */
 p {
     font-size: 20px;
     max-width: 750px;
     margin: 20px auto;
     line-height: 1.7;
-    color: #3a3a3a;
+    color: #4a463f;
 }
 
+/* Button */
 .btn {
     display: inline-block;
-    padding: 16px 40px;
-    background: #5a2a2a;
-    color: #fff;
+    padding: 15px 40px;
+    background: #2f3e34;
+    color: #f1ece4;
     text-decoration: none;
     border-radius: 30px;
     margin-top: 40px;
@@ -44,21 +49,28 @@ p {
 }
 
 .btn:hover {
-    background: #3d1c1c;
+    background: #1f2b24;
     transform: translateY(-3px);
 }
 
-/* Floating meme words — now softer */
+/* Floating meme words */
 .meme {
     position: absolute;
     font-size: 14px;
-    opacity: 0.3;
+    opacity: 0.25;
     font-weight: bold;
-    color: #5a2a2a;
-    animation: floatText 15s linear infinite;
+    color: #2f3e34;
+    animation: floatText 18s linear infinite;
 }
 
 @keyframes floatText {
     0% { transform: translateY(100vh); }
     100% { transform: translateY(-10vh); }
+}
+
+/* Subtle sports icons */
+.sport-icon {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.08;
 }
