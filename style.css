@@ -168,100 +168,139 @@ h2 {
   pointer-events: none;
   z-index: 3;
 }
+/* ============================= */
+/* ===== EVIDENCE SEQUENCE ===== */
+/* ============================= */
 
 .evidence-img {
   position: absolute;
-  width: 340px; /* bigger */
+  width: 360px;
   opacity: 0;
   border-radius: 6px;
-  box-shadow: 0 30px 90px rgba(0,0,0,0.7);
-  z-index: 10; /* above video */
+  box-shadow: 0 40px 120px rgba(0,0,0,0.8);
+  z-index: 10;
 }
-/* around video positions */
-.e1 { top: 8%; left: 8%; animation-delay: 0s; }
-.e2 { top: 10%; right: 6%; animation-delay: 2.5s; }
-.e3 { top: 15%; right: 5%; animation-delay: 5s; }
-.e4 { bottom: 5%; left: 15%; animation-delay: 7.5s; }
 
-/* Evidence 1 – Violent Snap */
+
+/* ============================= */
+/* Evidence 1 – Violent Snap    */
+/* ============================= */
+
 .e1 {
   top: 8%;
-  left: 5%;
+  left: 6%;
   animation: snapIn 8s infinite;
+  animation-delay: 0s;
 }
 
 @keyframes snapIn {
   0% { opacity: 0; transform: scale(0.3) rotate(-25deg); }
-  10% { opacity: 1; transform: scale(1.1) rotate(5deg); }
-  25% { opacity: 1; }
-  35% { opacity: 0; transform: scale(1.05) rotate(0deg); }
+  10% { opacity: 1; transform: scale(1.15) rotate(5deg); }
+  22% { opacity: 1; transform: scale(1) rotate(-2deg); }
+  32% { opacity: 0; }
   100% { opacity: 0; }
 }
 
 
+/* ============================= */
+/* Evidence 2 – Slide Reveal    */
+/* ============================= */
+
 .e2 {
-  bottom: 8%;     /* use bottom instead of top */
+  bottom: 10%;
   right: 6%;
   animation: slideIn 8s infinite;
   animation-delay: 2s;
 }
 
 @keyframes slideIn {
-  0% { opacity: 0; transform: translateX(300px) rotate(15deg); }
-  15% { opacity: 1; transform: translateX(0) rotate(-5deg); }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
+  0% { opacity: 0; transform: translateX(400px) rotate(15deg); }
+  12% { opacity: 1; transform: translateX(0) rotate(-4deg); }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
   100% { opacity: 0; }
 }
 
 
-/* Evidence 3 – Drop From Top */
+/* ============================= */
+/* Evidence 3 – Glitch Reveal   */
+/* ============================= */
+
 .e3 {
-  top: 15%;
+  top: 18%;
   right: 8%;
-  animation: dropIn 8s infinite;
+  animation: glitchIn 8s infinite;
   animation-delay: 4s;
 }
 
-@keyframes dropIn {
-  0% { opacity: 0; transform: translateY(-300px) rotate(-20deg); }
-  15% { opacity: 1; transform: translateY(0) rotate(4deg); }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
+@keyframes glitchIn {
+  0% { opacity: 0; transform: scale(0.8) rotate(-8deg); }
+
+  5% { opacity: 1; transform: scale(1.1) rotate(3deg) translateX(-10px); }
+  8% { transform: translateX(10px); }
+  12% { transform: translateX(-6px); }
+  15% { transform: translateX(0); }
+
+  28% { opacity: 1; transform: scale(1.02); }
+  38% { opacity: 0; }
+
   100% { opacity: 0; }
 }
 
 
-/* Evidence 4 – Slow Zoom Horror */
+/* ============================= */
+/* Evidence 4 – Slam Finale     */
+/* ============================= */
+
 .e4 {
-  bottom: 10%;
-  left: 15%;
-  animation: zoomIn 8s infinite;
+  bottom: 8%;
+  left: 12%;
+  animation: slamIn 8s infinite;
   animation-delay: 6s;
 }
 
-@keyframes zoomIn {
-  0% { opacity: 0; transform: scale(0.6) rotate(10deg); }
-  15% { opacity: 1; transform: scale(1.2) rotate(-3deg); }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
-  100% { opacity: 0; }
-}
+@keyframes slamIn {
+  0% {
+    opacity: 0;
+    transform: translateY(500px) scale(0.5) rotate(-18deg);
+  }
 
+  12% {
+    opacity: 1;
+    transform: translateY(-25px) scale(1.15) rotate(6deg);
+  }
+
+  18% {
+    transform: translateY(0) scale(1) rotate(-2deg);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  42% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 /* ===== CENTERED VIDEO ===== */
 
 .video-wrapper {
- .video-wrapper {
+  position: relative;
   width: 85%;
   max-width: 1200px;
-}
   margin: 60px auto;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 50px 150px rgba(0,0,0,0.8);
-  z-index: 5; /* important */
+  z-index: 5;
 }
+
 .video-wrapper video {
   width: 100%;
   display: block;
@@ -274,10 +313,6 @@ h2 {
   color: #f5f5f5;
   overflow-x: hidden;   /* only hide sideways scroll */
 }
-
-.evidence-page .center {
-  padding-top: 40px;
-}
 .evidence-page h1 {
   font-size: 90px;
   letter-spacing: 6px;
@@ -287,11 +322,6 @@ h2 {
 .evidence-page p {
   opacity: 0.6;
   letter-spacing: 2px;
-}
-.evidence-sequence {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
 }
 /* Evidence page specific spacing override */
 .evidence-page .center {
