@@ -58,13 +58,51 @@ p {
 }
 
 /* Each line different direction */
-.m1 { top: 10%; left: -40%; animation: moveRight 40s linear infinite; }
-.m2 { top: 25%; right: -40%; animation: moveLeft 45s linear infinite; }
-.m3 { bottom: 20%; left: -40%; animation: moveRight 50s linear infinite; }
-.m4 { top: 60%; right: -40%; animation: moveLeft 55s linear infinite; }
-.m5 { bottom: 10%; left: -50%; animation: moveRight 60s linear infinite; }
-.m6 { top: 45%; right: -50%; animation: moveLeft 48s linear infinite; }
-.m7 { bottom: 5%; left: -60%; animation: moveRight 52s linear infinite; }
+/* Floating meme positions */
+
+.m1 { 
+    top: 12%; 
+    left: -40%; 
+    animation: moveRight 55s linear infinite; 
+}
+
+.m2 { 
+    top: 28%; 
+    right: -40%; 
+    animation: moveLeft 50s linear infinite; 
+}
+
+.m3 { 
+    bottom: 35%; 
+    left: -45%; 
+    animation: moveRight 60s linear infinite; 
+}
+
+.m4 { 
+    top: 65%; 
+    right: -45%; 
+    animation: moveLeft 58s linear infinite; 
+}
+
+.m5 { 
+    bottom: 18%; 
+    left: -50%; 
+    animation: moveRight 62s linear infinite; 
+}
+
+.m6 { 
+    top: 45%; 
+    right: -50%; 
+    animation: moveLeft 65s linear infinite; 
+}
+
+.m7 { 
+    bottom: 4%; 
+    left: -55%; 
+    animation: moveRight 57s linear infinite; 
+}
+
+
 
 @keyframes moveRight {
     from { transform: translateX(0); }
@@ -80,7 +118,7 @@ p {
 
 .icon {
     position: fixed;
-    font-size: 36px;
+    font-size: 28px;
     opacity: 0.08;
     pointer-events: none;
     z-index: 0;
