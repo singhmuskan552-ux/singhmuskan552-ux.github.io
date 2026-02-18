@@ -55,47 +55,47 @@ p {
 /* Floating Meme Animation   */
 /* ------------------------- */
 
+.meme /* FLOATING TEXT */
 .meme {
     position: fixed;
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0.07;
+    font-weight: 700;
+    opacity: 0.08;
+    font-size: 18px;
     color: #2f3e34;
     white-space: nowrap;
     pointer-events: none;
-    animation: floatUp 35s linear infinite;
 }
 
-/* Different horizontal positions + stagger */
+/* Different starting positions */
+.m1 { top: 10%; left: -20%; animation: floatRight 40s linear infinite; }
+.m2 { top: 25%; right: -30%; animation: floatLeft 45s linear infinite; }
+.m3 { bottom: 20%; left: -25%; animation: floatRight 50s linear infinite; }
+.m4 { top: 60%; right: -35%; animation: floatLeft 55s linear infinite; }
+.m5 { bottom: 10%; left: -30%; animation: floatRight 60s linear infinite; }
+.m6 { top: 45%; right: -20%; animation: floatLeft 42s linear infinite; }
+.m7 { bottom: 5%; left: -40%; animation: floatRight 48s linear infinite; }
 
-.m1 { left: 5%; animation-delay: 0s; }
-.m2 { left: 20%; animation-delay: 5s; }
-.m3 { left: 35%; animation-delay: 10s; }
-.m4 { left: 55%; animation-delay: 15s; }
-.m5 { left: 70%; animation-delay: 20s; }
-.m6 { left: 85%; animation-delay: 25s; }
-.m7 { left: 45%; animation-delay: 30s; }
-
-/* Smooth vertical float */
-
-@keyframes floatUp {
-    0% { transform: translateY(110vh); }
-    100% { transform: translateY(-20vh); }
+/* Movement animations */
+@keyframes floatRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(140vw); }
 }
 
-/* ------------------------- */
-/* Background Icons          */
-/* ------------------------- */
+@keyframes floatLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-140vw); }
+}
 
-.sport-icon {
+/* FIXED BACKGROUND ICONS */
+.icon {
     position: fixed;
-    font-size: 28px;
-    opacity: 0.05;
+    font-size: 32px;
+    opacity: 0.06;
     pointer-events: none;
-    z-index: 1;
 }
 
-.icon1 { top: 15%; left: 8%; }
-.icon2 { bottom: 20%; right: 10%; }
-.icon3 { top: 65%; left: 15%; }
-.icon4 { bottom: 10%; right: 20%; }
+.icon1 { top: 15%; left: 10%; }
+.icon2 { bottom: 20%; right: 15%; }
+.icon3 { top: 70%; left: 20%; }
+.icon4 { bottom: 60%; right: 10%; }
+
