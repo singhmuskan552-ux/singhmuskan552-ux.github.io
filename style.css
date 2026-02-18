@@ -139,3 +139,37 @@ h2 {
 .i2 { bottom: 25%; right: 12%; }
 .i3 { top: 70%; left: 20%; }
 .i4 { bottom: 65%; right: 18%; }
+/* ===== FAST RUNNING IMAGES ===== */
+
+.flash {
+  position: fixed;
+  width: 140px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.f1 {
+  top: 20%;
+  left: -200px;
+  animation: runRight 8s linear infinite;
+}
+
+.f2 {
+  bottom: 25%;
+  right: -200px;
+  animation: runLeft 10s linear infinite;
+}
+
+.f3 {
+  top: 60%;
+  left: -250px;
+  animation: runRight 12s linear infinite;
+}
+
+@keyframes runRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(200vw); }
+}
+
+@keyframes runLeft
