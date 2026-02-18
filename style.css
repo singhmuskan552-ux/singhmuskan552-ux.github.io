@@ -1,34 +1,52 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f1e8;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #111, #1f1f1f, #2b2b2b, #000);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: white;
     text-align: center;
 }
 
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .center {
-    padding: 100px 20px;
+    padding: 120px 20px;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 48px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
 }
 
 p {
     font-size: 20px;
-    max-width: 600px;
+    max-width: 650px;
     margin: 20px auto;
+    line-height: 1.6;
+    color: #ddd;
 }
 
 .btn {
     display: inline-block;
-    padding: 15px 30px;
-    background: #e63946;
+    padding: 16px 35px;
+    background: #e10600;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    margin-top: 30px;
+    border-radius: 50px;
+    margin-top: 40px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.7);
 }
 
 .btn:hover {
-    background: #c1121f;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(225, 6, 0, 1);
 }
