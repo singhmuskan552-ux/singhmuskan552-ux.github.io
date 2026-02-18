@@ -160,50 +160,107 @@ h2 {
 /* ===== EVIDENCE BULLETIN BOARD MODE ===== */
 
 .evidence-sequence {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
 }
 
 .evidence-img {
   position: absolute;
-  width: 220px;
+  width: 340px; /* bigger */
   opacity: 0;
-  border-radius: 8px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-  animation: evidencePop 10s ease-in-out infinite;
+  border-radius: 6px;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.7);
+  z-index: 10; /* above video */
 }
-
 /* around video positions */
 .e1 { top: 8%; left: 8%; animation-delay: 0s; }
 .e2 { top: 70%; right: 10%; animation-delay: 2.5s; }
 .e3 { top: 15%; right: 5%; animation-delay: 5s; }
 .e4 { bottom: 5%; left: 15%; animation-delay: 7.5s; }
 
-@keyframes evidencePop {
-  0% { opacity: 0; transform: scale(0.7) rotate(-12deg); }
-  5% { opacity: 1; transform: scale(1.05) rotate(3deg); }
+/* Evidence 1 – Violent Snap */
+.e1 {
+  top: 8%;
+  left: 5%;
+  animation: snapIn 8s infinite;
+}
+
+@keyframes snapIn {
+  0% { opacity: 0; transform: scale(0.3) rotate(-25deg); }
+  10% { opacity: 1; transform: scale(1.1) rotate(5deg); }
   25% { opacity: 1; }
-  35% { opacity: 0; }
+  35% { opacity: 0; transform: scale(1.05) rotate(0deg); }
   100% { opacity: 0; }
 }
+
+
+/* Evidence 2 – Slide From Right */
+.e2 {
+  top: 70%;
+  right: 5%;
+  animation: slideIn 8s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(300px) rotate(15deg); }
+  15% { opacity: 1; transform: translateX(0) rotate(-5deg); }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+/* Evidence 3 – Drop From Top */
+.e3 {
+  top: 15%;
+  right: 8%;
+  animation: dropIn 8s infinite;
+  animation-delay: 4s;
+}
+
+@keyframes dropIn {
+  0% { opacity: 0; transform: translateY(-300px) rotate(-20deg); }
+  15% { opacity: 1; transform: translateY(0) rotate(4deg); }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+/* Evidence 4 – Slow Zoom Horror */
+.e4 {
+  bottom: 10%;
+  left: 15%;
+  animation: zoomIn 8s infinite;
+  animation-delay: 6s;
+}
+
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale(0.6) rotate(10deg); }
+  15% { opacity: 1; transform: scale(1.2) rotate(-3deg); }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
 
 /* ===== CENTERED VIDEO ===== */
 
 .video-wrapper {
   position: relative;
-  width: 70%;
-  max-width: 900px;
+  width: 75%;
+  max-width: 1000px;
   margin: 60px auto;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 40px 120px rgba(0,0,0,0.6);
-  filter: brightness(0.85) contrast(1.1);
-  z-index: 1;
+  box-shadow: 0 50px 150px rgba(0,0,0,0.8);
+  z-index: 5; /* important */
 }
 .video-wrapper video {
   width: 100%;
@@ -219,5 +276,21 @@ h2 {
 }
 
 .evidence-page .center {
-  padding: 60px 20px;
+  padding-top: 40px;
 }
+.evidence-page h1 {
+  font-size: 90px;
+  letter-spacing: 6px;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.7);
+}
+
+.evidence-page p {
+  opacity: 0.6;
+  letter-spacing: 2px;
+}
+.evidence-sequence {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
