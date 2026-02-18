@@ -2,10 +2,13 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 
-    background:
-        radial-gradient(circle at 20% 20%, #F9A822 0%, transparent 30%),
-        radial-gradient(circle at 80% 70%, #F68635 0%, transparent 30%),
-        linear-gradient(135deg, #FAECB6 0%, #93D3AE 100%);
+    background: linear-gradient(
+  135deg,
+  #F68B35 0%,
+  #F9A822 25%,
+  #FACC6B 50%,
+  #2B8A45 100%
+);
 
     color: #2B2B2B;
     overflow-x: hidden;
@@ -21,16 +24,16 @@ body {
     border-radius: 30px;
 }
 h1 {
-    font-family: 'Bungee', cursive;
-    font-size: 64px;
-    letter-spacing: 2px;
-
-    background: linear-gradient(90deg, #F68635, #2B8A45);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 70px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #F68B35, #2B8A45);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.15);
 }
+
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
@@ -60,11 +63,11 @@ p:nth-child(odd) {
     box-shadow: 0 12px 0 #2B8A45;
 }
 .meme {
-    opacity: 0.18;
-    font-size: 24px;
-    font-family: 'Bungee', cursive;
-    color: #F68635;
+  position: fixed;
+  opacity: 0.08;
+  filter: blur(1px);
 }
+
 
 .m1 { 
     top: 12%; 
