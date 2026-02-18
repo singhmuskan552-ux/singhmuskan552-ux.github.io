@@ -10,11 +10,13 @@ body {
 .center {
     padding: 120px 20px;
     animation: fadeIn 1.2s ease-in-out;
-    position: relative;
+    position: relative;   /* VERY IMPORTANT */
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    overflow: hidden;     /* CONTAINS floating text */
 }
+
 
 
 @keyframes fadeIn {
@@ -69,26 +71,27 @@ p:hover {
     white-space: nowrap;
 }
 
-/* Upwards movement */
 .up {
     left: 20%;
+    bottom: -50px;   /* start below container */
     animation: moveUp 40s linear infinite;
 }
 
-/* Left to right movement */
 .left {
-    top: 30%;
+    top: 20%;
+    left: -200px;   /* start off screen left */
     animation: moveLeft 50s linear infinite;
 }
 
-/* Right to left movement */
 .right {
-    top: 60%;
+    top: 50%;
+    right: -200px;  /* start off screen right */
     animation: moveRight 55s linear infinite;
 }
 
-/* Diagonal drift */
 .diagonal {
+    bottom: -100px;
+    left: -200px;
     animation: moveDiagonal 60s linear infinite;
 }
 
