@@ -179,7 +179,7 @@ h2 {
 }
 /* around video positions */
 .e1 { top: 8%; left: 8%; animation-delay: 0s; }
-.e2 { top: 27%; right: 19%; animation-delay: 2.5s; }
+.e2 { top: 10%; right: 6%; animation-delay: 2.5s; }
 .e3 { top: 15%; right: 5%; animation-delay: 5s; }
 .e4 { bottom: 5%; left: 15%; animation-delay: 7.5s; }
 
@@ -199,10 +199,9 @@ h2 {
 }
 
 
-/* Evidence 2 – Slide From Right */
 .e2 {
-  top: 27%;
-  right: 12%;
+  bottom: 8%;     /* use bottom instead of top */
+  right: 6%;
   animation: slideIn 8s infinite;
   animation-delay: 2s;
 }
