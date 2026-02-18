@@ -7,12 +7,15 @@ body {
     overflow-x: hidden;
 }
 
-/* Soft fade-in */
 .center {
     padding: 120px 20px;
     animation: fadeIn 1.2s ease-in-out;
     position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -57,7 +60,7 @@ p {
 .meme {
     position: absolute;
     font-size: 14px;
-    opacity: 0.25;
+    opacity: 0.40;
     font-weight: bold;
     color: #2f3e34;
     animation: floatText 18s linear infinite;
@@ -72,5 +75,5 @@ p {
 .sport-icon {
     position: absolute;
     font-size: 30px;
-    opacity: 0.08;
+    opacity: 0.11;
 }
