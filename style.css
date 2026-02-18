@@ -1,12 +1,10 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #e8efe6, #d9e4dd, #f1ece4);
-    color: #3e3a34;
-    text-align: center;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #FF6A00, #FF3C5F, #6A00F4);
+  color: #fff8f2;
+  overflow-x: hidden;
 }
-
 /* Center content */
 .center {
     padding: 120px 20px;
@@ -16,13 +14,15 @@ body {
     z-index: 2;
 }
 
-/* Headings */
 h1 {
-    font-size: 52px;
-    color: #2f3e34;
-    margin-bottom: 30px;
+  font-size: 64px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #fff, #A8FFE3, #FFD6A5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
-
 p {
     font-size: 20px;
     max-width: 750px;
@@ -31,35 +31,36 @@ p {
 }
 
 .btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background: #2f3e34;
-    color: #f1ece4;
-    text-decoration: none;
-    border-radius: 30px;
-    margin-top: 40px;
-    transition: 0.3s ease;
+  background: #A8FFE3;
+  color: #1a1a1a;
+  padding: 15px 40px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(168,255,227,0.6);
 }
 
 .btn:hover {
-    transform: translateY(-4px);
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(168,255,227,0.9);
 }
-
-/* ===== FLOATING TEXT ===== */
-
 .meme {
     position: fixed;
-    font-weight: 700;
-    opacity: 0.07;
-    font-size: 18px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
     white-space: nowrap;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
+
+    background: linear-gradient(90deg, #ff7a00, #ffb347, #00e5a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    opacity: 0.18;
+    text-shadow: 0 0 12px rgba(255,120,0,0.6);
 }
-
-/* Each line different direction */
-/* Floating meme positions */
-
 .m1 { 
     top: 12%; 
     left: -40%; 
@@ -90,19 +91,17 @@ p {
     animation: moveRight 62s linear infinite; 
 }
 
-.m6 { 
-    top: 45%; 
-    right: -50%; 
-    animation: moveLeft 65s linear infinite; 
+.m6 {
+    top: 50%;          /* moved slightly down */
+    right: -50%;
+    animation: moveLeft 65s linear infinite;
 }
 
-.m7 { 
-    bottom: 4%; 
-    left: -55%; 
-    animation: moveRight 57s linear infinite; 
+.m7 {
+    bottom: 2%;        /* slightly lower */
+    left: -55%;
+    animation: moveRight 57s linear infinite;
 }
-
-
 
 @keyframes moveRight {
     from { transform: translateX(0); }
