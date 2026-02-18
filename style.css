@@ -3,12 +3,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(135deg, #EDE9F7 0%, #D7D0F0 100%);
   color: #222;
-}
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #EDE9F7 0%, #D7D0F0 100%);
-  color: #222;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -163,4 +157,40 @@ h2 {
   60% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
   100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
 }
+/* ===== EVIDENCE BULLETIN BOARD MODE ===== */
 
+.evidence-sequence {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.evidence-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  transform: translate(-50%, -50%) scale(0.85);
+  opacity: 0;
+  border-radius: 8px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+  animation: evidencePop 12s ease-in-out infinite;
+}
+
+/* 4 evidences timing */
+.e1 { animation-delay: 0s; }
+.e2 { animation-delay: 3s; }
+.e3 { animation-delay: 6s; }
+.e4 { animation-delay: 9s; }
+
+@keyframes evidencePop {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.85) rotate(-6deg); }
+  8% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(3deg); }
+  28% { opacity: 1; }
+  40% { opacity: 0; transform: translate(-50%, -50%) scale(1.05) rotate(-2deg); }
+  100% { opacity: 0; }
+}
