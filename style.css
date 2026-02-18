@@ -175,37 +175,49 @@ h2 {
   opacity: 0;
   border-radius: 8px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-  animation: evidencePop 12s ease-in-out infinite;
+  animation: evidencePop 10s ease-in-out infinite;
 }
 
 /* around video positions */
-
-.e1 { top: 10%; left: 5%; animation-delay: 0s; }
-.e2 { top: 60%; right: 5%; animation-delay: 3s; }
-.e3 { top: 15%; right: 10%; animation-delay: 6s; }
-.e4 { bottom: 10%; left: 15%; animation-delay: 9s; }
+.e1 { top: 8%; left: 8%; animation-delay: 0s; }
+.e2 { top: 70%; right: 10%; animation-delay: 2.5s; }
+.e3 { top: 15%; right: 5%; animation-delay: 5s; }
+.e4 { bottom: 5%; left: 15%; animation-delay: 7.5s; }
 
 @keyframes evidencePop {
-  0% { opacity: 0; transform: scale(0.85) rotate(-6deg); }
-  8% { opacity: 1; transform: scale(1) rotate(3deg); }
-  28% { opacity: 1; }
-  40% { opacity: 0; transform: scale(1.05) rotate(-2deg); }
+  0% { opacity: 0; transform: scale(0.7) rotate(-12deg); }
+  5% { opacity: 1; transform: scale(1.05) rotate(3deg); }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
   100% { opacity: 0; }
 }
+
 /* ===== CENTERED VIDEO ===== */
 
 .video-wrapper {
   position: relative;
-  width: 600px;
-  margin: 40px auto;
-  border-radius: 12px;
+  width: 70%;
+  max-width: 900px;
+  margin: 60px auto;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.6);
+  filter: brightness(0.85) contrast(1.1);
   z-index: 1;
 }
-
 .video-wrapper video {
   width: 100%;
   display: block;
 }
 
+/* ===== CINEMATIC OVERRIDE FOR EVIDENCE PAGE ===== */
+
+.evidence-page {
+  background: linear-gradient(180deg, #1b1b1f 0%, #0f0f12 100%);
+  color: #f5f5f5;
+  overflow: hidden;
+}
+
+.evidence-page .center {
+  padding: 60px 20px;
+}
