@@ -1,16 +1,13 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
-    background: linear-gradient(
-        135deg,
-        #FAECB6 0%,
-        #93D3AE 40%,
-        #2B8A45 100%
-    );
+    background:
+        radial-gradient(circle at 20% 20%, #F9A822 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, #F68635 0%, transparent 30%),
+        linear-gradient(135deg, #FAECB6 0%, #93D3AE 100%);
 
     color: #2B2B2B;
-    text-align: center;
     overflow-x: hidden;
 }
 .center {
@@ -24,52 +21,49 @@ body {
     border-radius: 30px;
 }
 h1 {
-    font-size: 56px;
-    letter-spacing: 3px;
-    font-weight: 800;
+    font-family: 'Bungee', cursive;
+    font-size: 64px;
+    letter-spacing: 2px;
 
-    background: linear-gradient(90deg, #2B8A45, #F68635);
+    background: linear-gradient(90deg, #F68635, #2B8A45);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    margin-bottom: 40px;
+    text-transform: uppercase;
 }
-
 p {
-    font-size: 20px;
-    max-width: 750px;
-    margin: 18px auto;
-    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    max-width: 700px;
+    margin: 22px auto;
+    line-height: 1.7;
 }
-
+p:nth-child(odd) {
+    transform: rotate(-0.5deg);
+}
 .btn {
-    display: inline-block;
-    padding: 16px 42px;
+    font-family: 'Bungee', cursive;
+    font-size: 18px;
 
     background: #F9A822;
     color: #2B2B2B;
 
-    border-radius: 50px;
-    font-weight: 700;
-    text-decoration: none;
-    margin-top: 40px;
+    padding: 18px 50px;
+    border-radius: 60px;
 
-    transition: 0.3s ease;
+    box-shadow: 0 8px 0 #2B8A45;
+    transition: 0.2s ease;
 }
 
 .btn:hover {
-    background: #F68635;
-    transform: scale(1.05);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 0 #2B8A45;
 }
-
 .meme {
-    position: fixed;
-    font-weight: 700;
-    opacity: 0.12;
-    font-size: 20px;
-    white-space: nowrap;
-    pointer-events: none;
-    color: #2B8A45;
+    opacity: 0.18;
+    font-size: 24px;
+    font-family: 'Bungee', cursive;
+    color: #F68635;
 }
 
 .m1 { 
