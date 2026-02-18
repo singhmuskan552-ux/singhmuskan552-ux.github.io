@@ -253,9 +253,10 @@ h2 {
 /* ===== CENTERED VIDEO ===== */
 
 .video-wrapper {
-  position: relative;
-  width: 75%;
-  max-width: 1000px;
+ .video-wrapper {
+  width: 85%;
+  max-width: 1200px;
+}
   margin: 60px auto;
   border-radius: 8px;
   overflow: hidden;
