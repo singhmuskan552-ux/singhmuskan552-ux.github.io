@@ -1,28 +1,40 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #FF6A00, #FF3C5F, #6A00F4);
-  color: #fff8f2;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #FAECB6 0%,
+        #93D3AE 40%,
+        #2B8A45 100%
+    );
+
+    color: #2B2B2B;
+    text-align: center;
+    overflow-x: hidden;
 }
-/* Center content */
 .center {
+    position: relative;
     padding: 120px 20px;
     max-width: 900px;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
+
+    background: rgba(250, 236, 182, 0.35);
+    backdrop-filter: blur(4px);
+    border-radius: 30px;
+}
+h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    font-weight: 800;
+
+    background: linear-gradient(90deg, #2B8A45, #F68635);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 40px;
 }
 
-h1 {
-  font-size: 64px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  background: linear-gradient(90deg, #fff, #A8FFE3, #FFD6A5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px rgba(255,255,255,0.4);
-}
 p {
     font-size: 20px;
     max-width: 750px;
@@ -31,36 +43,35 @@ p {
 }
 
 .btn {
-  background: #A8FFE3;
-  color: #1a1a1a;
-  padding: 15px 40px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
-  box-shadow: 0 0 15px rgba(168,255,227,0.6);
+    display: inline-block;
+    padding: 16px 42px;
+
+    background: #F9A822;
+    color: #2B2B2B;
+
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 40px;
+
+    transition: 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(168,255,227,0.9);
+    background: #F68635;
+    transform: scale(1.05);
 }
+
 .meme {
     position: fixed;
-    font-weight: 800;
+    font-weight: 700;
+    opacity: 0.12;
     font-size: 20px;
-    letter-spacing: 1px;
     white-space: nowrap;
     pointer-events: none;
-    z-index: 0;
-
-    background: linear-gradient(90deg, #ff7a00, #ffb347, #00e5a8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    opacity: 0.18;
-    text-shadow: 0 0 12px rgba(255,120,0,0.6);
+    color: #2B8A45;
 }
+
 .m1 { 
     top: 12%; 
     left: -40%; 
