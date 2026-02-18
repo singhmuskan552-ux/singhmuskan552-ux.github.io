@@ -1,37 +1,31 @@
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-
-    background: linear-gradient(
-  135deg,
-  #F68B35 0%,
-  #F9A822 25%,
-  #FACC6B 50%,
-  #2B8A45 100%
-);
-
-    color: #2B2B2B;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #5B2DFF 0%, #FF3CAC 50%, #00F5FF 100%);
+  color: white;
 }
+
 .center {
     position: relative;
     padding: 120px 20px;
     max-width: 900px;
     margin: 0 auto;
 
-    background: rgba(250, 236, 182, 0.35);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
     border-radius: 30px;
+.center p:nth-of-type(odd) {
+    transform: rotate(-0.5deg);
+}
 }
 h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-size: 70px;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #F68B35, #2B8A45);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 
+    4px 4px 0px #111111,
+    0 0 20px #00F5FF;
 }
 
 p {
@@ -41,34 +35,29 @@ p {
     margin: 22px auto;
     line-height: 1.7;
 }
-p:nth-child(odd) {
-    transform: rotate(-0.5deg);
-}
 .btn {
-    font-family: 'Bungee', cursive;
-    font-size: 18px;
-
-    background: #F9A822;
-    color: #2B2B2B;
-
-    padding: 18px 50px;
-    border-radius: 60px;
-
-    box-shadow: 0 8px 0 #2B8A45;
-    transition: 0.2s ease;
+  background: #B4F000;
+  color: #111;
+  font-weight: 800;
+  padding: 18px 45px;
+  border-radius: 40px;
+  box-shadow: 0 8px 0 #111;
+  transition: 0.2s ease;
 }
 
 .btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 0 #2B8A45;
+  transform: translateY(-5px);
+  box-shadow: 0 14px 0 #111;
 }
 .meme {
-  position: fixed;
-  opacity: 0.08;
-  filter: blur(1px);
+  position: fixed;   /* THIS IS REQUIRED */
+  opacity: 0.15;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00F5FF;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
 }
-
-
 .m1 { 
     top: 12%; 
     left: -40%; 
@@ -113,7 +102,7 @@ p:nth-child(odd) {
 
 @keyframes moveRight {
     from { transform: translateX(0); }
-    to { transform: translateX(160vw); }
+    to { transform: translateX(200vw); }
 }
 
 @keyframes moveLeft {
