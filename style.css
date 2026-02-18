@@ -117,9 +117,32 @@ p:hover {
     100% { transform: translate(120vw, -120vh); }
 }
 
-/* Subtle sports icons */
 .sport-icon {
-    position: absolute;
-    font-size: 30px;
-    opacity: 0.11;
+    position: fixed;   /* fixed to screen */
+    font-size: 32px;
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+/* Each icon fixed in different corner */
+
+.sport-icon:nth-of-type(1) {
+    top: 15%;
+    left: 8%;
+}
+
+.sport-icon:nth-of-type(2) {
+    bottom: 20%;
+    right: 10%;
+}
+
+.sport-icon:nth-of-type(3) {
+    top: 65%;
+    left: 15%;
+}
+}
+
+.sport-icon:nth-of-type(2) {
+    bottom: 65%;
+    right: 15%;
 }
