@@ -9,6 +9,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(135deg, #EDE9F7 0%, #D7D0F0 100%);
   color: #222;
+  -webkit-font-smoothing: antialiased;
 }
 
 .center {
@@ -34,6 +35,7 @@ h1 {
   line-height: 1.7;
   max-width: 650px;
   font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .btn {
