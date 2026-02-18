@@ -4,12 +4,20 @@ body {
   background: linear-gradient(135deg, #EDE9F7 0%, #D7D0F0 100%);
   color: #222;
 }
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #EDE9F7 0%, #D7D0F0 100%);
+  color: #222;
+}
 
 .center {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
   padding: 120px 20px;
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
@@ -52,14 +60,17 @@ h2 {
 }
 
 .meme {
-  position: fixed;   /* THIS IS REQUIRED */
-  opacity: 0.15;
-  color: #ffffff;
-  text-shadow: 0 0 10px #00F5FF;
-  white-space: nowrap;
+  position: fixed;
+  font-weight: 700;
+  font-size: 22px;
+  opacity: 0.35;
+  color: #6C5CE7;
+  text-shadow: 0 0 12px rgba(108, 92, 231, 0.25);
   pointer-events: none;
   z-index: 0;
+  filter: blur(0.3px);
 }
+
 .m1 { 
     top: 12%; 
     left: -40%; 
@@ -109,7 +120,7 @@ h2 {
 
 @keyframes moveLeft {
     from { transform: translateX(0); }
-    to { transform: translateX(-160vw); }
+    to { transform: translateX(-200vw); }
 }
 
 /* ===== FIXED BACKGROUND ICONS ===== */
