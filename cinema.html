@@ -61,12 +61,19 @@
 <script>
 let slides = document.querySelectorAll('.slide');
 let index = 0;
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+// First slide delay
+setTimeout(() => {
+  slides[index].classList.add('active');
+}, 800);
 
 setInterval(() => {
   slides[index].classList.remove('active');
   index = (index + 1) % slides.length;
   slides[index].classList.add('active');
-}, 2500);
-</script>
+}, 3500);
+
 
 </body>
