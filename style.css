@@ -1,176 +1,70 @@
+/* ===================================== */
+/* ===== GLOBAL BASE STYLES ============ */
+/* ===================================== */
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #EDE9F7 0%, #D7D0F0 100%);
-  color: #222;
   -webkit-font-smoothing: antialiased;
-}
-
-.center {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 120px 20px;   /* restore original spacing */
-  position: relative;
-  z-index: 2;
 }
 
 h1 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 80px;
-  letter-spacing: 3px;
-  margin-bottom: 50px;
-  line-height: 1.1;
+  letter-spacing: 4px;
 }
 
-.content p {
-  font-size: 20px;
-  margin: 22px auto;
-  line-height: 1.7;
-  max-width: 650px;
-  font-weight: 400;
-  margin-bottom: 30px;
+.center {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
-.btn {
-  display: inline-block;
-  margin: 50px auto;
-  padding: 16px 42px;
-  background: #222;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 40px;
-  font-weight: 600;
-  transition: 0.3s ease;
+
+/* ===================================== */
+/* ===== EVIDENCE PAGE ================= */
+/* ===================================== */
+
+.evidence-page {
+  background: linear-gradient(180deg, #1b1b1f 0%, #0f0f12 100%);
+  color: #f5f5f5;
+  overflow-x: hidden;
 }
 
-.btn:hover {
-  background: #444;
-  transform: translateY(-3px);
+.evidence-page h1 {
+  font-size: 90px;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.7);
 }
 
-h2 {
-  margin-top: 40px;
-  font-weight: 500;
-  opacity: 0.7;
+.evidence-page p {
+  opacity: 0.6;
+  letter-spacing: 2px;
 }
 
-.meme {
-  position: fixed;
-  font-weight: 700;
-  font-size: 22px;
-  opacity: 0.35;
-  color: #6C5CE7;
-  text-shadow: 0 0 12px rgba(108, 92, 231, 0.25);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(0.3px);
+/* Centered Video */
+
+.video-wrapper {
+  width: 85%;
+  max-width: 1200px;
+  margin: 60px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 50px 150px rgba(0,0,0,0.8);
 }
 
-.m1 { 
-    top: 12%; 
-    left: -40%; 
-    animation: moveRight 55s linear infinite; 
+.video-wrapper video {
+  width: 100%;
+  display: block;
 }
 
-.m2 { 
-    top: 28%; 
-    right: -40%; 
-    animation: moveLeft 50s linear infinite; 
-}
-
-.m3 { 
-    bottom: 35%; 
-    left: -45%; 
-    animation: moveRight 60s linear infinite; 
-}
-
-.m4 { 
-    top: 65%; 
-    right: -45%; 
-    animation: moveLeft 58s linear infinite; 
-}
-
-.m5 { 
-    bottom: 18%; 
-    left: -50%; 
-    animation: moveRight 62s linear infinite; 
-}
-
-.m6 {
-    top: 50%;          /* moved slightly down */
-    right: -50%;
-    animation: moveLeft 65s linear infinite;
-}
-
-.m7 {
-    bottom: 2%;        /* slightly lower */
-    left: -55%;
-    animation: moveRight 57s linear infinite;
-}
-
-@keyframes moveRight {
-    from { transform: translateX(0); }
-    to { transform: translateX(200vw); }
-}
-
-@keyframes moveLeft {
-    from { transform: translateX(0); }
-    to { transform: translateX(-200vw); }
-}
-
-/* ===== FIXED BACKGROUND ICONS ===== */
-
-.icon {
-    position: fixed;
-    font-size: 28px;
-    opacity: 0.18;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.i1 { top: 15%; left: 10%; }
-.i2 { bottom: 25%; right: 12%; }
-.i3 { top: 70%; left: 20%; }
-.i4 { bottom: 65%; right: 18%; }
-/* ===== FAST RUNNING IMAGES ===== */
-/* ===== Subtle Flash Images ===== */
-
-.flash {
-  position: fixed;
-  width: 160px;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 1;
-  animation: popFade 6s ease-in-out infinite;
-}
-
-/* different timing so they don't appear together */
-.f1 { top: 20%; left: 15%; animation-delay: 3s; }
-.f2 { bottom: 25%; right: 18%; animation-delay: 1s; }
-.f3 { top: 50%; left: 50%; animation-delay: 4s; }
-
-@keyframes popFade {
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
-  15% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); }
-  40% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); }
-  60% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
-}
-/* ===== EVIDENCE BULLETIN BOARD MODE ===== */
+/* Evidence floating images */
 
 .evidence-sequence {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  inset: 0;
   pointer-events: none;
-  z-index: 3;
+  z-index: 5;
 }
-/* ============================= */
-/* ===== EVIDENCE SEQUENCE ===== */
-/* ============================= */
 
 .evidence-img {
   position: absolute;
@@ -178,34 +72,24 @@ h2 {
   opacity: 0;
   border-radius: 6px;
   box-shadow: 0 40px 120px rgba(0,0,0,0.8);
-  z-index: 10;
 }
 
-
-/* ============================= */
-/* Evidence 1 – Violent Snap    */
-/* ============================= */
-
+/* Snap */
 .e1 {
   top: 8%;
   left: 6%;
   animation: snapIn 8s infinite;
-  animation-delay: 0s;
 }
 
 @keyframes snapIn {
   0% { opacity: 0; transform: scale(0.3) rotate(-25deg); }
   10% { opacity: 1; transform: scale(1.15) rotate(5deg); }
-  22% { opacity: 1; transform: scale(1) rotate(-2deg); }
-  32% { opacity: 0; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
   100% { opacity: 0; }
 }
 
-
-/* ============================= */
-/* Evidence 2 – Slide Reveal    */
-/* ============================= */
-
+/* Slide */
 .e2 {
   bottom: 10%;
   right: 6%;
@@ -215,17 +99,13 @@ h2 {
 
 @keyframes slideIn {
   0% { opacity: 0; transform: translateX(400px) rotate(15deg); }
-  12% { opacity: 1; transform: translateX(0) rotate(-4deg); }
-  25% { opacity: 1; }
-  35% { opacity: 0; }
+  15% { opacity: 1; transform: translateX(0) rotate(-4deg); }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
   100% { opacity: 0; }
 }
 
-
-/* ============================= */
-/* Evidence 3 – Glitch Reveal   */
-/* ============================= */
-
+/* Glitch */
 .e3 {
   top: 18%;
   right: 8%;
@@ -234,24 +114,16 @@ h2 {
 }
 
 @keyframes glitchIn {
-  0% { opacity: 0; transform: scale(0.8) rotate(-8deg); }
-
-  5% { opacity: 1; transform: scale(1.1) rotate(3deg) translateX(-10px); }
-  8% { transform: translateX(10px); }
-  12% { transform: translateX(-6px); }
-  15% { transform: translateX(0); }
-
-  28% { opacity: 1; transform: scale(1.02); }
-  38% { opacity: 0; }
-
+  0% { opacity: 0; }
+  10% { opacity: 1; transform: translateX(-8px); }
+  15% { transform: translateX(8px); }
+  20% { transform: translateX(0); }
+  35% { opacity: 1; }
+  45% { opacity: 0; }
   100% { opacity: 0; }
 }
 
-
-/* ============================= */
-/* Evidence 4 – Slam Finale     */
-/* ============================= */
-
+/* Slam */
 .e4 {
   bottom: 8%;
   left: 12%;
@@ -260,109 +132,17 @@ h2 {
 }
 
 @keyframes slamIn {
-  0% {
-    opacity: 0;
-    transform: translateY(500px) scale(0.5) rotate(-18deg);
-  }
-
-  12% {
-    opacity: 1;
-    transform: translateY(-25px) scale(1.15) rotate(6deg);
-  }
-
-  18% {
-    transform: translateY(0) scale(1) rotate(-2deg);
-  }
-
-  30% {
-    opacity: 1;
-  }
-
-  42% {
-    opacity: 0;
-    transform: scale(1.05);
-  }
-
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; transform: translateY(500px) scale(0.5); }
+  15% { opacity: 1; transform: translateY(0) scale(1.1); }
+  30% { opacity: 1; }
+  45% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-/* ===== CENTERED VIDEO ===== */
 
-.video-wrapper {
-  position: relative;
-  width: 85%;
-  max-width: 1200px;
-  margin: 60px auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 50px 150px rgba(0,0,0,0.8);
-  z-index: 5;
-}
-
-.video-wrapper video {
-  width: 100%;
-  display: block;
-}
-
-/* ===== CINEMATIC OVERRIDE FOR EVIDENCE PAGE ===== */
-
-.evidence-page {
-  background: linear-gradient(180deg, #1b1b1f 0%, #0f0f12 100%);
-  color: #f5f5f5;
-  overflow-x: hidden;   /* only hide sideways scroll */
-}
-.evidence-page h1 {
-  font-size: 90px;
-  letter-spacing: 6px;
-  text-shadow: 0 10px 40px rgba(0,0,0,0.7);
-}
-
-.evidence-page p {
-  opacity: 0.6;
-  letter-spacing: 2px;
-}
-/* Evidence page specific spacing override */
-.evidence-page .center {
-  padding: 40px 20px;
-}
-/* ============================= */
-/* ===== CINEMA SECTION ======== */
-/* ============================= */
-
-.cinema-page {
-  background: #0f0f12;
-  overflow: hidden;
-}
-
-.cinema-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: none; /* HARD CUT */
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.75);
-}
-/* ============================= */
-/* ===== CINEMA TRAILER MODE === */
-/* ============================= */
+/* ===================================== */
+/* ===== CINEMA PAGE =================== */
+/* ===================================== */
 
 .cinema-page {
   background: #0c0c10;
@@ -387,22 +167,17 @@ h2 {
   opacity: 1;
 }
 
-/* Background image */
+/* FULL IMAGE VISIBLE (NO CROP) */
 
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6) contrast(1.1);
-  transform: scale(1.1);
-  transition: transform 6s ease;
+  object-fit: contain;       /* important */
+  background: black;
+  filter: brightness(0.8) contrast(1.05);
 }
 
-.slide.active img {
-  transform: scale(1);
-}
-
-/* CENTERED DRAMATIC TEXT */
+/* Cinematic Caption */
 
 .caption {
   position: absolute;
@@ -413,17 +188,20 @@ h2 {
   text-align: center;
 
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 90px;
+  font-size: 85px;
   letter-spacing: 6px;
   line-height: 1.1;
   color: white;
 
   text-shadow:
-    0 0 40px rgba(0,0,0,0.8),
-    0 20px 80px rgba(0,0,0,0.9);
+    0 0 40px rgba(0,0,0,0.9),
+    0 30px 100px rgba(0,0,0,1);
 }
 
-/* ===== GLITCH TRANSITION ===== */
+
+/* ===================================== */
+/* ===== GLITCH TRANSITION ============= */
+/* ===================================== */
 
 .glitch-transition {
   animation: glitchFlash 1.2s forwards;
@@ -431,11 +209,9 @@ h2 {
 
 @keyframes glitchFlash {
   0%   { filter: brightness(1); }
-  10%  { filter: brightness(5) contrast(2); }
-  20%  { filter: brightness(0); }
-  30%  { filter: brightness(3); }
-  40%  { filter: brightness(0); }
-  50%  { filter: brightness(4); }
-  70%  { filter: brightness(0); }
+  15%  { filter: brightness(4) contrast(2); }
+  30%  { filter: brightness(0); }
+  45%  { filter: brightness(3); }
+  60%  { filter: brightness(0); }
   100% { filter: brightness(0); }
 }
