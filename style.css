@@ -394,6 +394,12 @@ h2 {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.6) contrast(1.1);
+  transform: scale(1.1);
+  transition: transform 6s ease;
+}
+
+.slide.active img {
+  transform: scale(1);
 }
 
 /* CENTERED DRAMATIC TEXT */
@@ -417,57 +423,6 @@ h2 {
     0 20px 80px rgba(0,0,0,0.9);
 }
 
-/* Slight cinematic zoom */
-
-.slide.active img {
-  animation: subtleZoom 2.5s ease-out forwards;
-}
-
-@keyframes subtleZoom {
-  from { transform: scale(1.05); }
-  to { transform: scale(1); }
-}
-<div class="slide active">
-  <img src="images/LOTR.jpg">
-  <div class="caption">
-    NOT A VIEWER.<br>AN ADVENTURER.
-  </div>
-</div>
-
-<div class="slide">
-  <img src="images/Leo.jpg">
-  <div class="caption">
-    CINEMA ISN’T ENTERTAINMENT.<br>IT’S RELIGION.
-  </div>
-</div>
-
-<div class="slide">
-  <img src="images/got.jpg">
-  <div class="caption">
-    WOULD CLAIM THE THRONE.<br>FIX THE WRITING.
-  </div>
-</div>
-
-<div class="slide">
-  <img src="images/Laalrang.jpg">
-  <div class="caption">
-    SILENT.<br>BUT CALCULATING.
-  </div>
-</div>
-
-<div class="slide">
-  <img src="images/Munjhya.jpg">
-  <div class="caption">
-    FEARLESS.<br>UNTIL 2 A.M.
-  </div>
-</div>
-
-<div class="slide">
-  <img src="images/hangover.jpg">
-  <div class="caption">
-    “I’M FINE.”<br>LEGENDARY LAST WORDS.
-  </div>
-</div>
 /* ===== GLITCH TRANSITION ===== */
 
 .glitch-transition {
@@ -484,12 +439,3 @@ h2 {
   70%  { filter: brightness(0); }
   100% { filter: brightness(0); }
 }
-.slide img {
-  transform: scale(1.1);
-  transition: transform 6s ease;
-}
-
-.slide.active img {
-  transform: scale(1);
-}
-
