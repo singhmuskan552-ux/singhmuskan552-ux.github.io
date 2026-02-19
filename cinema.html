@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Cinematic Guide</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="cinema-page">
+
+<div class="cinema-container">
+
+  <div class="slide active">
+    <img src="images/lotr.jpg">
+    <div class="caption">SOME MEN GO ON QUESTS.<br>HE GOES ALL IN.</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/theatre.jpg">
+    <div class="caption">HE DOESN’T JUST WATCH MOVIES.<br>HE BELIEVES IN THEM.</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/got.jpg">
+    <div class="caption">WOULD RULE.<br>BUT COMPLAIN ABOUT THE SCRIPT.</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/crime.jpg">
+    <div class="caption">CALM OUTSIDE.<br>48 THOUGHTS PER SECOND.</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/horror.jpg">
+    <div class="caption">BRAVE IN PUBLIC.<br>SUSPICIOUS OF EVERY SHADOW.</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/hangover.jpg">
+    <div class="caption">SAID “I’M GOOD.”<br>WAS NOT GOOD.</div>
+  </div>
+
+</div>
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}, 2500);
+</script>
+
+</body>
+</html>
