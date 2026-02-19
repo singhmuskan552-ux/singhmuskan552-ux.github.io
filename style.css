@@ -468,3 +468,20 @@ h2 {
     “I’M FINE.”<br>LEGENDARY LAST WORDS.
   </div>
 </div>
+/* ===== GLITCH TRANSITION ===== */
+
+.glitch-transition {
+  animation: glitchFlash 1.2s forwards;
+}
+
+@keyframes glitchFlash {
+  0%   { filter: brightness(1); }
+  10%  { filter: brightness(5) contrast(2); }
+  20%  { filter: brightness(0); }
+  30%  { filter: brightness(3); }
+  40%  { filter: brightness(0); }
+  50%  { filter: brightness(4); }
+  70%  { filter: brightness(0); }
+  100% { filter: brightness(0); }
+}
+
