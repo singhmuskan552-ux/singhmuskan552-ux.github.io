@@ -6,7 +6,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="evidence-page">
 
   <div class="center">
@@ -26,6 +25,16 @@
     <img src="evidence3.jpeg" class="evidence-img e3">
     <img src="evidence4.jpeg" class="evidence-img e4">
   </div>
+<script>
+setTimeout(() => {
+  document.body.classList.add("glitch-transition");
+
+  setTimeout(() => {
+    window.location.href = "cinema.html";
+  }, 1200); // wait for glitch to finish
+
+}, 25000);
+</script>
 
 </body>
 </html>
