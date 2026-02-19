@@ -6,65 +6,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="cinema-page">
 
 <div class="cinema-container">
 
-  <div class="slideshow">   <!-- ADD THIS WRAPPER -->
+  <!-- SLIDES -->
 
-    <div class="slide active">
-      <img src="images/LOTR.jpg">
-      <div class="caption">
-        NOT A VIEWER.<br>AN ADVENTURER.
-      </div>
+  <div class="slide active">
+    <img src="images/LOTR.jpeg" alt="LOTR">
+    <div class="caption">
+      NOT A VIEWER.<br>AN ADVENTURER.
     </div>
+  </div>
 
-    <div class="slide">
-      <img src="images/Leo.jpg">
-      <div class="caption">
-        CINEMA ISN’T ENTERTAINMENT.<br>IT’S RELIGION.
-      </div>
+  <div class="slide">
+    <img src="images/Leo.png" alt="Leo">
+    <div class="caption">
+      CINEMA ISN’T ENTERTAINMENT.<br>IT’S RELIGION.
     </div>
+  </div>
 
-    <div class="slide">
-      <img src="images/got.jpg">
-      <div class="caption">
-        WOULD CLAIM THE THRONE.<br>FIX THE WRITING.
-      </div>
+  <div class="slide">
+    <img src="images/got.png" alt="GOT">
+    <div class="caption">
+      WOULD CLAIM THE THRONE.<br>FIX THE WRITING.
     </div>
+  </div>
 
-    <div class="slide">
-      <img src="images/Laalrang.jpg">
-      <div class="caption">
-        SILENT.<br>BUT CALCULATING.
-      </div>
+  <div class="slide">
+    <img src="images/Laalrang.png" alt="Laal Rang">
+    <div class="caption">
+      SILENT.<br>BUT CALCULATING.
     </div>
-
-    <div class="slide">
-      <img src="images/Munjhya.jpg">
-      <div class="caption">
-        FEARLESS.<br>UNTIL 2 A.M.
-      </div>
-    </div>
-
-    <div class="slide">
-      <img src="images/hangover.jpg">
-      <div class="caption">
-        “I’M FINE.”<br>LEGENDARY LAST WORDS.
-      </div>
-    </div>
-
-  </div> <!-- END slideshow -->
+  </div>
 
 </div>
 
 <script>
-let slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.slide');
 let index = 0;
-
-setTimeout(() => {
-  slides[index].classList.add('active');
-}, 800);
 
 setInterval(() => {
   slides[index].classList.remove('active');
@@ -72,4 +53,6 @@ setInterval(() => {
   slides[index].classList.add('active');
 }, 3500);
 </script>
+
 </body>
+</html>
