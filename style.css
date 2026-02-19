@@ -316,7 +316,7 @@ h2 {
 .evidence-page h1 {
   font-size: 90px;
   letter-spacing: 6px;
-  text-shadow: 0 10px 40px rgba(0,0,0,0.7);
+  text-shadow: 0 10px 40px rgba(0,0,0,1.1);
 }
 
 .evidence-page p {
@@ -328,93 +328,62 @@ h2 {
   padding: 40px 20px;
 }
 /* ============================= */
-/* ===== CINEMA SECTION ======== */
-/* ============================= */
-
-.cinema-page {
-  background: #0f0f12;
-  overflow: hidden;
-}
-
-.cinema-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: none; /* HARD CUT */
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.75);
-}
-/* ============================= */
-/* ===== CINEMA TRAILER MODE === */
+/* ===== CINEMA SCROLL MODE ==== */
 /* ============================= */
 
 .cinema-page {
   background: #0c0c10;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .cinema-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 120vh;
 }
 
-/* Slides */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+}
 
 .slide {
   position: absolute;
   inset: 0;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
 }
 
-/* Background image */
-
 .slide img {
   width: 100%;
-  height: 100%;
+  height: 110vh;
   object-fit: cover;
-  filter: brightness(0.6) contrast(1.1);
-  transform: scale(1.1);
-  transition: transform 6s ease;
+  filter: brightness(0.65);
+  transform: scale(1.12);
+  transition: transform 8s ease;
 }
 
 .slide.active img {
   transform: scale(1);
 }
 
-/* CENTERED DRAMATIC TEXT */
-
 .caption {
   position: absolute;
-  top: 50%;
+  bottom: 12%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
+  transform: translateX(-50%);
+  width: 85%;
   text-align: center;
 
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 90px;
-  letter-spacing: 6px;
+  font-size: 80px;
+  letter-spacing: 5px;
   line-height: 1.1;
   color: white;
 
