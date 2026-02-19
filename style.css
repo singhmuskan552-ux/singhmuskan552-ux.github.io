@@ -427,3 +427,44 @@ h2 {
   from { transform: scale(1.05); }
   to { transform: scale(1); }
 }
+<div class="slide active">
+  <img src="images/lotr.jpg">
+  <div class="caption">
+    NOT A VIEWER.<br>AN ADVENTURER.
+  </div>
+</div>
+
+<div class="slide">
+  <img src="images/theatre.jpg">
+  <div class="caption">
+    CINEMA ISN’T ENTERTAINMENT.<br>IT’S RELIGION.
+  </div>
+</div>
+
+<div class="slide">
+  <img src="images/got.jpg">
+  <div class="caption">
+    WOULD CLAIM THE THRONE.<br>FIX THE WRITING.
+  </div>
+</div>
+
+<div class="slide">
+  <img src="images/crime.jpg">
+  <div class="caption">
+    SILENT.<br>BUT CALCULATING.
+  </div>
+</div>
+
+<div class="slide">
+  <img src="images/horror.jpg">
+  <div class="caption">
+    FEARLESS.<br>UNTIL 2 A.M.
+  </div>
+</div>
+
+<div class="slide">
+  <img src="images/hangover.jpg">
+  <div class="caption">
+    “I’M FINE.”<br>LEGENDARY LAST WORDS.
+  </div>
+</div>
