@@ -377,23 +377,22 @@ h2 {
 
 .caption {
   position: absolute;
-  top: 50%;
+  bottom: 12%;                /* move lower for cinematic feel */
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
+  transform: translateX(-50%);
+  width: 70%;                 /* reduce width */
   text-align: center;
 
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 90px;
-  letter-spacing: 6px;
-  line-height: 1.1;
+  font-size: 70px;            /* smaller */
+  letter-spacing: 3px;        /* reduce tracking */
+  line-height: 1.15;
   color: white;
 
   text-shadow:
-    0 0 40px rgba(0,0,0,0.9),
-    0 20px 80px rgba(0,0,0,1);
+    0 5px 25px rgba(0,0,0,0.9),
+    0 15px 60px rgba(0,0,0,1);
 }
-
 
 /* ============================= */
 /* ===== GLITCH TRANSITION ===== */
