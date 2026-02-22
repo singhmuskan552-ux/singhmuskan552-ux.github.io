@@ -15,8 +15,7 @@
 
   <div class="slide active">
     <img src="images/LOTR.jpeg" alt="LOTR">
-    <div class="caption">
-    </div>
+    <div class="caption"></div>
   </div>
 
   <div class="slide">
@@ -39,8 +38,9 @@
       SILENT.<br>BUT CALCULATING.
     </div>
   </div>
+
   <div class="slide">
-    <img src="images/Hangover.png" alt="Hangover in Thailand">
+    <img src="images/Hangover.png" alt="Hangover">
     <div class="caption">
       STILL.<br>PENDING.
     </div>
@@ -48,15 +48,80 @@
 
 </div>
 
+<!-- ============================= -->
+<!-- YAARON KA YAAR SECTION HERE -->
+<!-- ============================= -->
+
+<div class="yaaron-section">
+
+  <div class="yaar-video active">
+    <video src="videos/yaar1.mp4" muted playsinline></video>
+  </div>
+
+  <div class="yaar-video">
+    <video src="videos/yaar2.mp4" muted playsinline></video>
+  </div>
+
+  <div class="yaar-video">
+    <video src="videos/yaar3.mp4" muted playsinline></video>
+  </div>
+
+</div>
+
 <script>
+
 const slides = document.querySelectorAll('.slide');
 let index = 0;
 
-setInterval(() => {
+const yaarSection = document.querySelector('.yaaron-section');
+const yaarVideos = document.querySelectorAll('.yaar-video');
+let yaarIndex = 0;
+
+/* -------- CINEMA SLIDES -------- */
+
+function nextSlide() {
   slides[index].classList.remove('active');
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
-}, 6500);
+  index++;
+
+  if (index < slides.length) {
+    slides[index].classList.add('active');
+  } else {
+    startYaarSection();
+  }
+}
+
+setInterval(nextSlide, 6500);
+
+/* -------- TRANSITION TO YAAR -------- */
+
+function startYaarSection() {
+  document.querySelector('.cinema-container').style.opacity = "0";
+
+  setTimeout(() => {
+    document.querySelector('.cinema-container').style.display = "none";
+    yaarSection.classList.add('active');
+    playYaarVideos();
+  }, 2000);
+}
+
+/* -------- YAAR VIDEOS -------- */
+
+function playYaarVideos() {
+  yaarVideos[yaarIndex].classList.add('active');
+  let currentVideo = yaarVideos[yaarIndex].querySelector("video");
+  currentVideo.play();
+
+  currentVideo.onended = () => {
+    yaarVideos[yaarIndex].classList.remove('active');
+    yaarIndex++;
+
+    if (yaarIndex < yaarVideos.length) {
+      yaarVideos[yaarIndex].classList.add('active');
+      yaarVideos[yaarIndex].querySelector("video").play();
+    }
+  };
+}
+
 </script>
 
 </body>
